@@ -1,0 +1,15 @@
+[package]
+name = "revm-minimal-example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+revm = { version = "19.3.0", features = ["alloydb", "serde-json", "optional_balance_check", "optional_block_gas_limit"] }
+alloy = { version = "0.7.3", features = ["full", "rpc-types-debug", "rpc-types-trace"] }
+tokio = { version = "1.43.0", features = ["rt-multi-thread", "macros", "sync", "time"] }
+anyhow = "1.0.93"
+colored = "3.0.0"
+log = "0.4.25"
+chrono = "0.4.23"
+dotenvy = "0.15.7"
+env_logger = "0.11.5"
