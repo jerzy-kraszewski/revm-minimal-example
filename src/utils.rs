@@ -6,7 +6,7 @@ use std::io::Write;
 
 pub fn setup_logger() -> Result<()> {
     let mut builder =
-        Builder::from_env(Env::default().default_filter_or("error,revm_is_all_you_need=info"));
+        Builder::from_env(Env::default().default_filter_or("error,revm_minimal_example=info"));
 
     builder.format(|buf, record: &Record| {
         let timestamp = chrono::Local::now().format("[%H:%M:%S%.3f]");
