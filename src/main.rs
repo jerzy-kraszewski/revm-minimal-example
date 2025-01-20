@@ -26,7 +26,7 @@ async fn main() -> Result<()> {
     let provider = Arc::new(provider);
     let mut db = CacheDB::new(AlloyDB::new(provider.clone(), BlockId::default()).unwrap());
 
-    let counter_bytecode = Bytecode::new_raw(Counter::BYTECODE.clone());
+    let counter_bytecode = Bytecode::new_raw(Counter::DEPLOYED_BYTECODE.clone());
     let counter_address = address!("0x1234567890abcdef2ec9065E61B39BB9E4d82513");
     let counter_account = AccountInfo::from_bytecode(counter_bytecode);
     db.insert_account_info(counter_address, counter_account);
